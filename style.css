@@ -42,3 +42,15 @@ body {
 .cd_child sup {
   font-size: 1rem;
 }
+
+@media screen and (max-width: 600px) {
+  .countdown_div {
+    flex-direction: column;
+  }
+
+  .cd_child {
+    width: 85vw;
+  }
+}
+
+
