@@ -37,6 +37,8 @@ body {
   margin: 1rem;
   text-align: center;
   min-width: 10vw;
+  font-feature-settings: "tnum";
+  font-variant-numeric: tabular-nums;
 }
 
 .cd_child sup {

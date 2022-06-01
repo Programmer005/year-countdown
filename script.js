@@ -20,10 +20,17 @@ const countdown = () => {
   const minuteText = Math.floor((gap % hour) / minute)
   const secondText = Math.floor((gap % minute) / second)
 
-  daysEl.innerHTML = `${dayText} <sup>Days</sup>`
-  hoursEl.innerHTML = `${hourText} <sup>Hours</sup>`
-  minutesEl.innerHTML = `${minuteText} <sup>Minutes</sup>`
-  secondsEl.innerHTML = `${secondText} <sup>Seconds</sup>`
+  /**
+   * @param {number} num
+   */
+  const format = (num) => {
+    return num > 9 ? num : '0' + num;
+  }
+
+  daysEl.innerHTML = `${format(dayText)} <sup>Days</sup>`
+  hoursEl.innerHTML = `${format(hourText)} <sup>Hours</sup>`
+  minutesEl.innerHTML = `${format(minuteText)} <sup>Minutes</sup>`
+  secondsEl.innerHTML = `${format(secondText)} <sup>Seconds</sup>`
 }
 
 countdown()
